@@ -18,7 +18,7 @@ public class WebController {
 
         list.add("apple");
         list.add("banana");
-        list.add("fineapple");
+        list.add("pineapple");
 
         products.add(new Product(1,"사과",1000,10));
         products.add(new Product(2,"배",2000,16));
