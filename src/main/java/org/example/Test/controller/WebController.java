@@ -1,6 +1,6 @@
-package org.example.Test;
+package org.example.test.controller;
 
-import org.example.Test.domain.Product;
+import org.example.test.domain.Product;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 @Controller
 public class WebController {
-    @GetMapping("/")
+    @GetMapping("/index")
     public String index(Model model) {
         System.out.println("index");
         
