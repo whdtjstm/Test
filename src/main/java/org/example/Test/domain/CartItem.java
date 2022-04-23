@@ -1,21 +1,34 @@
 package org.example.test.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class CartItem {
     private Item item;
     private int quantity;
 
+    public CartItem() { }
     public CartItem(Item item) {
         this.item = item;
         this.quantity = 1;
+    }
+
+    public CartItem(Item item, int quantity) {
+        this.item = item;
+        this.quantity = quantity;
+    }
+
+    public Item getItem() {
+        return item;
+    }
+
+    public void setItem(Item item) {
+        this.item = item;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public void increment() {
@@ -23,6 +36,6 @@ public class CartItem {
     }
 
     public void decrement() {
-        this.quantity = this.quantity > 0 ? this.quantity - 1 : 0;
+        this.quantity = this.quantity > 1 ? this.quantity - 1 : 1;
     }
 }
